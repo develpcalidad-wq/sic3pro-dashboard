@@ -1,0 +1,11 @@
+{
+  "ultima_actualizacion": "2026-01-20T10:33:01.812440",
+  "archivos_generados": [
+    "termination.json",
+    "nonconformities.json",
+    "nonconforming.json",
+    "dashboard.json"
+  ],
+  "estado": "exito",
+  "total_datos": 17516
+}

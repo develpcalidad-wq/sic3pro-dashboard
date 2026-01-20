@@ -1,0 +1,67 @@
+name: Actualizar datos SIC3PRO
+
+on:
+  schedule:
+    # Ejecutar todos los días a las 8 AM UTC (5 AM Chile)
+    - cron: '0 8 * * *'
+  workflow_dispatch:  # Permitir ejecución manual
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas beautifulsoup4 requests lxml
+    
+    - name: Ejecutar script de actualización
+      run: |
+        chmod +x scripts/update_data.sh
+        ./scripts/update_data.sh auto
+    
+    - name: Verificar cambios en datos
+      id: check-changes
+      run: |
+        git add data/datasets/ || true
+        if git diff --cached --quiet; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit y push si hay cambios
+      if: steps.check-changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "🤖 Actualización automática de datos $(date '+%Y-%m-%d %H:%M')"
+        git push origin main
+      
+    - name: Notificar éxito
+      if: success()
+      run: |
+        echo "✅ Datos actualizados exitosamente"
+        echo "📅 Última actualización: $(date)"
+    
+    - name: Notificar fallo
+      if: failure()
+      run: |
+        echo "❌ Error en actualización de datos"
+        echo "Por favor revisa los logs"

@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "tipo": "no_conformidades",
+    "generado_en": "2026-01-20T10:33:01.812440",
+    "proyecto": "1253"
+  },
+  "resumen": {
+    "total": 48,
+    "abiertas": 15,
+    "cerradas": 28,
+    "en_progreso": 5,
+    "tasa_resolucion": "85.4%",
+    "tiempo_promedio_resolucion": "7.2 días"
+  },
+  "por_tipo": [
+    {
+      "tipo": "Calidad",
+      "cantidad": 5,
+      "porcentaje": "10.4%"
+    },
+    {
+      "tipo": "Seguridad",
+      "cantidad": 10,
+      "porcentaje": "20.8%"
+    },
+    {
+      "tipo": "Ambiental",
+      "cantidad": 15,
+      "porcentaje": "31.2%"
+    },
+    {
+      "tipo": "Proceso",
+      "cantidad": 20,
+      "porcentaje": "41.7%"
+    },
+    {
+      "tipo": "Documentación",
+      "cantidad": 25,
+      "porcentaje": "52.1%"
+    }
+  ],
+  "por_mes": [
+    {
+      "mes": "Oct",
+      "cantidad": 8
+    },
+    {
+      "mes": "Nov",
+      "cantidad": 12
+    },
+    {
+      "mes": "Dec",
+      "cantidad": 15
+    },
+    {
+      "mes": "Jan",
+      "cantidad": 13
+    }
+  ],
+  "ncs_criticas": [
+    {
+      "id": "NC-2024-001",
+      "descripcion": "Soldadura no conforme en tubería principal",
+      "tipo": "Calidad",
+      "prioridad": "Crítica",
+      "fecha_deteccion": "2026-01-05",
+      "estado": "Abierta",
+      "responsable": "Área Mecánica",
+      "dias_abierta": 15
+    }
+  ]
+}

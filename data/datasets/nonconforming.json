@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "tipo": "productos_no_conformes",
+    "generado_en": "2026-01-20T10:33:01.812440",
+    "proyecto": "1253"
+  },
+  "resumen": {
+    "total": 32,
+    "rechazados": 15,
+    "reprocesados": 12,
+    "en_revision": 5,
+    "tasa_rechazo": "46.9%"
+  },
+  "por_material": [
+    {
+      "material": "Tuberías A106",
+      "cantidad": 4,
+      "estado": "Rechazado"
+    },
+    {
+      "material": "Válvulas Globo",
+      "cantidad": 6,
+      "estado": "Reprocesado"
+    },
+    {
+      "material": "Estructuras A36",
+      "cantidad": 8,
+      "estado": "En revisión"
+    },
+    {
+      "material": "Equipos Rotativos",
+      "cantidad": 10,
+      "estado": "Rechazado"
+    },
+    {
+      "material": "Instrumentos",
+      "cantidad": 12,
+      "estado": "Reprocesado"
+    },
+    {
+      "material": "Material Eléctrico",
+      "cantidad": 14,
+      "estado": "En revisión"
+    }
+  ]
+}

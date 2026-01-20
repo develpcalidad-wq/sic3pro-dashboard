@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "proyecto": "Proyecto 1253",
+    "ultima_actualizacion": "2026-01-20T10:33:01.812440",
+    "version_datos": "1.0"
+  },
+  "kpis": {
+    "total_terminaciones": 50,
+    "terminaciones_completadas": 12,
+    "terminaciones_pendientes": 26,
+    "terminaciones_retrasadas": 12,
+    "no_conformidades_abiertas": 15,
+    "productos_no_conformes": 32,
+    "eficiencia_general": "24.0%",
+    "tasa_resolucion_nc": "85.4%"
+  },
+  "alertas_consolidadas": [
+    {
+      "id": "ALT-001",
+      "tipo": "critica",
+      "titulo": "Retraso crítico en área eléctrica",
+      "descripcion": "2 items con retraso > 5 días",
+      "fecha": "2026-01-20",
+      "accion_requerida": true
+    },
+    {
+      "id": "ALT-002",
+      "tipo": "advertencia",
+      "titulo": "Items pendientes de documentación",
+      "descripcion": "12 items completados sin documentación final",
+      "fecha": "2026-01-19",
+      "accion_requerida": true
+    },
+    {
+      "id": "ALT-003",
+      "tipo": "informativa",
+      "titulo": "Revisión mensual programada",
+      "descripcion": "Revisión mensual de calidad programada para mañana",
+      "fecha": "2026-01-20",
+      "accion_requerida": false
+    }
+  ],
+  "ultima_actualizacion_ui": "2026-01-20 10:33:01"
+}
