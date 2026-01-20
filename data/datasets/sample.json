@@ -1,0 +1,43 @@
+{
+  "project": "1253",
+  "name": "Proyecto Ejemplo",
+  "status": "active",
+  "lastUpdated": "2024-01-20T10:00:00",
+  "metrics": {
+    "totalItems": 156,
+    "completed": 94,
+    "pending": 42,
+    "delayed": 20,
+    "efficiency": 0.78
+  },
+  "alerts": [
+    {
+      "id": "ALT-001",
+      "type": "critical",
+      "message": "Retraso crítico en instalaciones eléctricas",
+      "area": "Área 1",
+      "date": "2024-01-18"
+    },
+    {
+      "id": "ALT-002",
+      "type": "warning", 
+      "message": "No conformidad pendiente de revisión",
+      "area": "Área 2",
+      "date": "2024-01-19"
+    }
+  ],
+  "recentActivities": [
+    {
+      "id": "ACT-001",
+      "description": "Terminación completada: TERM-001",
+      "date": "2024-01-15",
+      "user": "Juan Pérez"
+    },
+    {
+      "id": "ACT-002",
+      "description": "Nueva no conformidad reportada",
+      "date": "2024-01-16",
+      "user": "María González"
+    }
+  ]
+}
